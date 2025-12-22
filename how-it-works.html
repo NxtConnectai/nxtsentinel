@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How NXT Sentinel works - Technical overview of voice-activated duress protection">
+    <title>How It Works | NXT Sentinel</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+    <!-- Navigation -->
+    <nav class="bg-[#222B3A] text-white py-4">
+        <div class="max-w-4xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <svg class="w-8 h-8 text-[#00A878]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                    </path>
+                </svg>
+                <span class="text-xl font-bold tracking-tight">NXT SENTINEL</span>
+            </a>
+            <a href="index.html" class="text-sm text-slate-300 hover:text-white transition">← Back to Home</a>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-16">
+        <h1 class="text-4xl font-bold text-[#222B3A] mb-4">How It Works</h1>
+        <p class="text-slate-500 mb-8">Understanding the technology behind NXT Sentinel</p>
+
+        <div class="prose prose-slate max-w-none">
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-[#222B3A] mb-4">The 3-Second Defense</h2>
+                <p class="text-slate-600 leading-relaxed mb-4">
+                    NXT Sentinel uses advanced on-device voice recognition to detect your custom trigger word. When
+                    detected, it executes a three-step security response in under 3 seconds—completely silently and
+                    without any visible indication.
+                </p>
+                <div class="bg-[#00A878]/10 border-l-4 border-[#00A878] p-6 rounded-r-lg">
+                    <p class="font-semibold text-[#222B3A]">Why it's different from "panic buttons"</p>
+                    <p class="text-slate-600 mt-2">Traditional panic buttons are visible, audible, or require physical
+                        interaction. NXT Sentinel works hands-free and gives no indication to an attacker that help is
+                        on the way.</p>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-[#222B3A] mb-4">Step-by-Step Process</h2>
+
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 font-bold text-xl">
+                                1</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-[#222B3A] mb-2">Always Listening (Privacy-First)</h3>
+                                <p class="text-slate-600 leading-relaxed mb-3">
+                                    NXT Sentinel runs a low-power background service that continuously analyzes ambient
+                                    audio using an on-device machine learning model (CoreML for iOS, TensorFlow Lite for
+                                    Android).
+                                </p>
+                                <ul class="space-y-1 text-slate-600 text-sm">
+                                    <li>• No audio is recorded or stored</li>
+                                    <li>• All processing happens on your device</li>
+                                    <li>• Works offline—no internet required</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-[#00A878] text-white rounded-lg flex items-center justify-center font-bold text-xl">
+                                2</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-[#222B3A] mb-2">Keyword Detection</h3>
+                                <p class="text-slate-600 leading-relaxed mb-3">
+                                    You set a custom trigger word during setup (e.g., "Aunty", "Moon", "Red Weather").
+                                    When the system detects your keyword, it immediately activates the Stealth Execution
+                                    sequence.
+                                </p>
+                                <div class="bg-slate-100 p-3 rounded text-sm text-slate-700">
+                                    <strong>Pro Tip:</strong> Choose a phrase you can say naturally in conversation
+                                    without arousing suspicion.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 font-bold text-xl">
+                                3</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-[#222B3A] mb-2">Stealth Execution</h3>
+                                <p class="text-slate-600 leading-relaxed mb-3">Three actions happen simultaneously:</p>
+                                <div class="grid md:grid-cols-3 gap-4 mt-4">
+                                    <div class="bg-blue-50 p-4 rounded-lg">
+                                        <div class="font-semibold text-blue-900 mb-1">🔒 Hide Apps</div>
+                                        <p class="text-xs text-blue-800">Banking, messaging, and photo apps disappear
+                                            from your home screen and search.</p>
+                                    </div>
+                                    <div class="bg-red-50 p-4 rounded-lg">
+                                        <div class="font-semibold text-red-900 mb-1">🚨 Alert Contacts</div>
+                                        <p class="text-xs text-red-800">Silent SMS with your GPS location is sent to
+                                            emergency contacts.</p>
+                                    </div>
+                                    <div class="bg-slate-100 p-4 rounded-lg">
+                                        <div class="font-semibold text-slate-900 mb-1">🛡️ Lock Device</div>
+                                        <p class="text-xs text-slate-800">UI switches to a "System Maintenance" screen
+                                            requiring your master password.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-[#222B3A] mb-4">Technical Architecture</h2>
+                <p class="text-slate-600 leading-relaxed mb-4">
+                    NXT Sentinel uses operating system-level APIs to modify app visibility without uninstalling them.
+                    This is done through:
+                </p>
+                <ul class="space-y-2 text-slate-600">
+                    <li><strong>Android:</strong> Device Policy Controller (DPC) APIs to hide apps at the launcher level
+                    </li>
+                    <li><strong>iOS:</strong> ScreenTime API and FamilyControls framework to restrict app visibility
+                    </li>
+                </ul>
+                <p class="text-slate-600 leading-relaxed mt-4">
+                    All trigger word processing uses on-device neural processing units (NPU) or digital signal
+                    processors (DSP) for real-time keyword matching without cloud connectivity.
+                </p>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-[#222B3A] mb-4">Patent-Pending Innovation</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    NXT Sentinel's "Ambient Voice-Triggered Stealth Application Obscuration" system is patent-pending
+                    (USPTO). Our unique approach combines real-time voice recognition with silent alerting and decoy UI
+                    transitions, all without requiring physical or visual interaction.
+                </p>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-[#222B3A] mb-4">Recovery Mode</h2>
+                <p class="text-slate-600 leading-relaxed mb-4">
+                    Once in lockdown, only you can unlock the device using your master password. The decoy "System
+                    Maintenance" screen prevents unauthorized users from accessing your hidden apps or realizing the
+                    device is in a secure state.
+                </p>
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg">
+                    <p class="font-semibold text-amber-900 mb-2">Important</p>
+                    <p class="text-amber-800">Always test Recovery Mode in a safe environment before relying on it in an
+                        emergency.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-8 mt-16">
+        <div class="max-w-4xl mx-auto px-6 text-center text-sm text-slate-500">
+            <p>© 2025 Nxtconnectoff Corp. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="index.html" class="text-[#00A878] hover:underline">Home</a> ·
+                <a href="privacy.html" class="text-[#00A878] hover:underline">Privacy Policy</a> ·
+                <a href="terms.html" class="text-[#00A878] hover:underline">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

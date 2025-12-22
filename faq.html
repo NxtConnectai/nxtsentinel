@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently Asked Questions about NXT Sentinel">
+    <title>FAQ | NXT Sentinel</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        details>summary {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+    <!-- Navigation -->
+    <nav class="bg-[#222B3A] text-white py-4">
+        <div class="max-w-4xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <svg class="w-8 h-8 text-[#00A878]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                    </path>
+                </svg>
+                <span class="text-xl font-bold tracking-tight">NXT SENTINEL</span>
+            </a>
+            <a href="index.html" class="text-sm text-slate-300 hover:text-white transition">← Back to Home</a>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-16">
+        <h1 class="text-4xl font-bold text-[#222B3A] mb-4">Frequently Asked Questions</h1>
+        <p class="text-slate-500 mb-8">Quick answers to common questions about NXT Sentinel</p>
+
+        <div class="space-y-4">
+            <details class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                <summary class="font-semibold text-[#222B3A] cursor-pointer">Is my voice data recorded or sent to
+                    servers?</summary>
+                <p class="text-slate-600 mt-3 leading-relaxed">
+                    <strong>No.</strong> All voice processing happens entirely on your device using on-device machine
+                    learning (CoreML for iOS, TensorFlow Lite for Android). Your trigger word never leaves your phone,
+                    and no audio is recorded or stored.
+                </p>
+            </details>
+
+            <details class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                <summary class="font-semibold text-[#222B3A] cursor-pointer">Does NXT Sentinel work offline?</summary>
+                <p class="text-slate-600 mt-3 leading-relaxed">
+                    <strong>Yes.</strong> The core duress protection features (app hiding, trigger word detection,
+                    device lockdown) work completely offline. SMS alerts to emergency contacts also work without
+                    internet, as long as you have cellular service.
+                </p>
+            </details>
+
+            <details class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                <summary class="font-semibold text-[#222B3A] cursor-pointer">How do I unlock my device after triggering
+                    the alarm?</summary>
+                <p class="text-slate-600 mt-3 leading-relaxed">
+                    You'll need to enter your master password (set during app setup) on the "System Maintenance"
+                    recovery screen. This password is different from your phone's unlock code and is stored in your
+                    device's secure keychain.
+                </p>
+            </details>
+
+            <details class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                <summary class="font-semibold text-[#222B3A] cursor-pointer">What if someone forces me to unlock my
+                    phone?</summary>
+                <p class="text-slate-600 mt-3 leading-relaxed">
+                    Even if you're forced to unlock your device with your PIN/fingerprint, NXT Sentinel will have
+                    already hidden your sensitive apps from the home screen and app drawer. The only way to unhide them
+                    is with your master password in Recovery Mode.
+                </p>
+            </details>
+
+            <details class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                <summary class="font-semibold text-[#222B3A] cursor-pointer">Can I have multiple trigger words?
+                </summary>
+                <p class="text-slate-600 mt-3 leading-relaxed">
+                    Yes! You can set up to 4 different trigger phrases. This provides redundancy in case you forget one,
+                    or allows you to use different phrases in different contexts.
+                </p>
+            </details>
+
+            <details class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                <summary class="font-semibold text-[#222B3A] cursor-pointer">Will the app drain my battery?</summary>
+                <p class="text-slate-600 mt-3 leading-relaxed">
+                    NXT Sentinel uses low-power background listening modes designed to minimize battery impact. On
+                    modern phones, the additional drain is typically less than 2-3% per day. You can monitor exact usage
+                    in your device's battery settings.
+                </p>
+            </details>
+
+            <details class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                <summary class="font-semibold text-[#222B3A] cursor-pointer">What apps can I hide?</summary>
+                <p class="text-slate-600 mt-3 leading-relaxed">
+                    You can hide any third-party apps installed on your device, including banking apps, messaging apps
+                    (WhatsApp, Telegram, Signal), social media, photo galleries, and email clients. System apps
+                    (Settings, Phone) cannot be hidden for security reasons.
+                </p>
+            </details>
+
+            <details class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                <summary class="font-semibold text-[#222B3A] cursor-pointer">Is NXT Sentinel legal to use?</summary>
+                <p class="text-slate-600 mt-3 leading-relaxed">
+                    NXT Sentinel is designed as a personal safety tool and is legal to use in most jurisdictions.
+                    However, you are responsible for understanding local laws regarding audio monitoring and emergency
+                    alerts. We recommend consulting local regulations if you have concerns.
+                </p>
+            </details>
+
+            <details class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                <summary class="font-semibold text-[#222B3A] cursor-pointer">Can minors use NXT Sentinel?</summary>
+                <p class="text-slate-600 mt-3 leading-relaxed">
+                    Yes. NXT Sentinel is a safety tool available to users of all ages. Minors should use the app with
+                    parental or guardian consent and supervision.
+                </p>
+            </details>
+
+            <details class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                <summary class="font-semibold text-[#222B3A] cursor-pointer">What happens if I forget my master
+                    password?</summary>
+                <p class="text-slate-600 mt-3 leading-relaxed">
+                    For security reasons, we cannot recover your master password. However, you can reset it through your
+                    account settings using your account email. If you're locked out, you may need to factory reset your
+                    device as a last resort.
+                </p>
+            </details>
+
+            <details class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                <summary class="font-semibold text-[#222B3A] cursor-pointer">Does NXT Sentinel replace calling 911?
+                </summary>
+                <p class="text-slate-600 mt-3 leading-relaxed">
+                    <strong>No.</strong> NXT Sentinel is a supplementary safety tool. In immediate danger, always call
+                    911 or your local emergency number if possible. NXT Sentinel is designed for situations where
+                    calling for help directly might escalate the danger.
+                </p>
+            </details>
+
+            <details class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                <summary class="font-semibold text-[#222B3A] cursor-pointer">How accurate is the trigger word detection?
+                </summary>
+                <p class="text-slate-600 mt-3 leading-relaxed">
+                    Our on-device ML models achieve ~95% accuracy in controlled environments. False positives are rare
+                    but possible. We recommend using unique phrases (e.g., "Red Weather" instead of common words like
+                    "Help") to minimize false triggers.
+                </p>
+            </details>
+        </div>
+
+        <div class="bg-[#00A878]/10 border-l-4 border-[#00A878] p-6 rounded-r-lg mt-12">
+            <p class="font-semibold text-[#222B3A] mb-2">Need more help?</p>
+            <p class="text-slate-600">Join our <a href="https://discord.gg/4YvAjCfF" target="_blank"
+                    rel="noopener noreferrer" class="text-[#00A878] hover:underline font-semibold">Discord community</a>
+                to ask questions and connect with other users.</p>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-8 mt-16">
+        <div class="max-w-4xl mx-auto px-6 text-center text-sm text-slate-500">
+            <p>© 2025 Nxtconnectoff Corp. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="index.html" class="text-[#00A878] hover:underline">Home</a> ·
+                <a href="how-it-works.html" class="text-[#00A878] hover:underline">How It Works</a> ·
+                <a href="faq.html" class="text-[#00A878] hover:underline">FAQ</a> ·
+                <a href="privacy.html" class="text-[#00A878] hover:underline">Privacy Policy</a> ·
+                <a href="terms.html" class="text-[#00A878] hover:underline">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
