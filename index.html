@@ -4,7 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NXT Sentinel provides discreet personal security through voice-activated duress protection. Instantly hide apps, lock your device, and silently alert help with a single secret word.">
+    <meta name="keywords" content="personal security, duress protection, emergency app, privacy, mobile security">
+    <meta name="author" content="Nxtconnectoff Corp.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="NXT Sentinel | Discreet Personal Security">
+    <meta property="og:description" content="Your phone is your liability. We make it your shield. Voice-activated duress protection that hides apps, locks your device, and silently alerts help.">
+    <meta property="og:site_name" content="NXT Sentinel">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NXT Sentinel | Discreet Personal Security">
+    <meta name="twitter:description" content="Your phone is your liability. We make it your shield. Voice-activated duress protection that hides apps, locks your device, and silently alerts help.">
+    
     <title>NXT Sentinel | Discreet Personal Security</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate icon" href="/favicon.ico">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Tailwind CSS CDN -->
+    <!-- Note: Tailwind CDN doesn't support SRI. For production, consider using a build process with integrity checks. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -33,35 +59,92 @@
             transition: all 0.2s;
         }
 
-        .btn-primary:hover {
+        .btn-primary:hover:not(:disabled) {
             background-color: #008f66;
             transform: translateY(-1px);
         }
+
+        button:disabled {
+            pointer-events: none;
+        }
+
+        /* Skip to content link styling */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        .focus\:not-sr-only:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            padding: inherit;
+            margin: inherit;
+            overflow: visible;
+            clip: auto;
+            white-space: normal;
+        }
     </style>
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "NXT Sentinel",
+        "applicationCategory": "SecurityApplication",
+        "operatingSystem": "iOS, Android",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "description": "Discreet personal security app that provides voice-activated duress protection. Instantly hides apps, locks device, and silently alerts help.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Nxtconnectoff Corp."
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5"
+        }
+    }
+    </script>
 </head>
 
 <body class="bg-slate-50 text-slate-800">
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#00A878] focus:text-white focus:rounded-lg focus:font-semibold">Skip to main content</a>
 
     <!-- Navigation -->
     <nav class="bg-[#222B3A] text-white py-4 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <!-- Simple Shield Logo -->
-                <svg class="w-8 h-8 text-[#00A878]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-8 h-8 text-[#00A878]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-label="NXT Sentinel shield logo" role="img">
+                    <title>NXT Sentinel Logo</title>
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
                     </path>
                 </svg>
                 <span class="text-xl font-bold tracking-tight">NXT SENTINEL</span>
             </div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-300" aria-label="Main navigation">
                 <a href="#how-it-works" class="hover:text-white transition">How it Works</a>
-                <a href="#features" class="hover:text-white transition">Features</a>
+                <a href="#how-it-works" class="hover:text-white transition">Features</a>
                 <a href="#privacy" class="hover:text-white transition">Privacy First</a>
-            </div>
+            </nav>
             <a href="#download"
-                class="bg-white/10 hover:bg-white/20 text-white px-5 py-2 rounded-full text-sm font-semibold transition">
-                Get Protected
+                class="bg-white/10 hover:bg-white/20 text-white px-5 py-2 rounded-full text-sm font-semibold transition"
+                aria-label="Get protected - Coming soon">
+                Coming Soon
             </a>
         </div>
     </nav>
@@ -82,18 +165,28 @@
                     In a coercive situation, your data is used against you. NXT Sentinel instantly hides your apps,
                     locks your device, and silently alerts help—triggered by a single secret word.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
+                <div class="flex flex-col sm:flex-row gap-4" id="download">
                     <button
-                        class="btn-primary px-8 py-3.5 rounded-lg font-bold text-lg shadow-lg flex items-center justify-center">
-                        Download for iOS
+                        class="btn-primary px-8 py-3.5 rounded-lg font-bold text-lg shadow-lg flex items-center justify-center opacity-90 cursor-not-allowed"
+                        aria-label="NXT Sentinel for iOS - Coming soon"
+                        disabled>
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                        </svg>
+                        Coming Soon - iOS
                     </button>
                     <button
-                        class="bg-slate-700 hover:bg-slate-600 text-white px-8 py-3.5 rounded-lg font-bold text-lg shadow-lg flex items-center justify-center transition">
-                        Download for Android
+                        class="bg-slate-700 hover:bg-slate-600 text-white px-8 py-3.5 rounded-lg font-bold text-lg shadow-lg flex items-center justify-center transition opacity-90 cursor-not-allowed"
+                        aria-label="NXT Sentinel for Android - Coming soon"
+                        disabled>
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                        </svg>
+                        Coming Soon - Android
                     </button>
                 </div>
                 <p class="mt-4 text-xs text-slate-400">
-                    *Requires iOS 16+ or Android 13+. Setup takes < 2 minutes. </p>
+                    *Requires iOS 16+ or Android 13+. Setup takes &lt; 2 minutes. </p>
             </div>
             <!-- Phone Mockup Illustration -->
             <div class="relative hidden md:block">
@@ -111,7 +204,8 @@
                         <!-- Mockup Screen Content -->
                         <div class="mb-4">
                             <svg class="w-16 h-16 text-[#00A878] mx-auto mb-4 animate-pulse" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
+                                stroke="currentColor" viewBox="0 0 24 24" aria-label="Active status indicator" role="img">
+                                <title>Sentinel Active</title>
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
@@ -128,6 +222,8 @@
         </div>
     </header>
 
+    <!-- Main Content -->
+    <main id="main-content">
     <!-- Problem / Solution Section -->
     <section id="how-it-works" class="py-24 bg-white">
         <div class="max-w-4xl mx-auto px-6 text-center mb-16">
@@ -142,7 +238,8 @@
             <!-- Step 1 -->
             <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
                 <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-label="Hide apps icon" role="img">
+                        <title>Hide Apps</title>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21">
                         </path>
@@ -158,7 +255,8 @@
             <!-- Step 2 -->
             <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
                 <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                    <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-label="Alert help icon" role="img">
+                        <title>Alert Help</title>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
                         </path>
@@ -176,7 +274,8 @@
             <!-- Step 3 -->
             <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
                 <div class="w-12 h-12 bg-slate-200 rounded-lg flex items-center justify-center mb-6">
-                    <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-label="Lock device icon" role="img">
+                        <title>Lock Device</title>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
                         </path>
@@ -204,7 +303,7 @@
                     <ul class="space-y-4">
                         <li class="flex items-center text-slate-300">
                             <svg class="w-5 h-5 text-[#00A878] mr-3" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
+                                viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
@@ -212,7 +311,7 @@
                         </li>
                         <li class="flex items-center text-slate-300">
                             <svg class="w-5 h-5 text-[#00A878] mr-3" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
+                                viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
@@ -220,7 +319,7 @@
                         </li>
                         <li class="flex items-center text-slate-300">
                             <svg class="w-5 h-5 text-[#00A878] mr-3" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
+                                viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
@@ -228,7 +327,7 @@
                         </li>
                         <li class="flex items-center text-slate-300">
                             <svg class="w-5 h-5 text-[#00A878] mr-3" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
+                                viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
@@ -249,13 +348,15 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-white border-t border-slate-200 py-12">
         <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-8">
             <div class="col-span-1 md:col-span-1">
                 <div class="flex items-center space-x-2 mb-4">
-                    <svg class="w-6 h-6 text-[#222B3A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-6 h-6 text-[#222B3A]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-label="NXT Sentinel shield logo" role="img">
+                        <title>NXT Sentinel Logo</title>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
                         </path>
@@ -271,27 +372,27 @@
             <div>
                 <h4 class="font-bold text-[#222B3A] mb-4">Product</h4>
                 <ul class="space-y-2 text-sm text-slate-600">
-                    <li><a href="#" class="hover:text-[#00A878]">Features</a></li>
-                    <li><a href="#" class="hover:text-[#00A878]">Pricing</a></li>
-                    <li><a href="#" class="hover:text-[#00A878]">Download</a></li>
+                    <li><a href="#how-it-works" class="hover:text-[#00A878] transition">Features</a></li>
+                    <li><a href="#download" class="hover:text-[#00A878] transition">Coming Soon</a></li>
+                    <li><a href="#how-it-works" class="hover:text-[#00A878] transition">How it Works</a></li>
                 </ul>
             </div>
 
             <div>
                 <h4 class="font-bold text-[#222B3A] mb-4">Support</h4>
                 <ul class="space-y-2 text-sm text-slate-600">
-                    <li><a href="#" class="hover:text-[#00A878]">Help Center</a></li>
-                    <li><a href="#" class="hover:text-[#00A878]">Setup Guide</a></li>
-                    <li><a href="#" class="hover:text-[#00A878]">Contact Us</a></li>
+                    <li><a href="#privacy" class="hover:text-[#00A878] transition">Privacy First</a></li>
+                    <li><a href="#how-it-works" class="hover:text-[#00A878] transition">Setup Guide</a></li>
+                    <li><a href="mailto:support@nxtsentinel.com" class="hover:text-[#00A878] transition">Contact Us</a></li>
                 </ul>
             </div>
 
             <div>
                 <h4 class="font-bold text-[#222B3A] mb-4">Legal</h4>
                 <ul class="space-y-2 text-sm text-slate-600">
-                    <li><a href="#" class="hover:text-[#00A878]">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:text-[#00A878]">Terms of Service</a></li>
-                    <li><a href="#" class="hover:text-[#00A878]">Data Security</a></li>
+                    <li><a href="/privacy-policy" class="hover:text-[#00A878] transition">Privacy Policy</a></li>
+                    <li><a href="/terms-of-service" class="hover:text-[#00A878] transition">Terms of Service</a></li>
+                    <li><a href="#privacy" class="hover:text-[#00A878] transition">Data Security</a></li>
                 </ul>
             </div>
         </div>
