@@ -22,8 +22,8 @@
 
 <body class="bg-slate-50 text-slate-800">
     <!-- Navigation -->
-    <nav class="bg-[#222B3A] text-white py-4">
-        <div class="max-w-4xl mx-auto px-6 flex justify-between items-center">
+    <nav class="bg-[#222B3A] text-white py-4 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-2">
                 <svg class="w-8 h-8 text-[#00A878]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -32,7 +32,14 @@
                 </svg>
                 <span class="text-xl font-bold tracking-tight">NXT SENTINEL</span>
             </a>
-            <a href="index.html" class="text-sm text-slate-300 hover:text-white transition">← Back to Home</a>
+            <div class="hidden md:flex items-center space-x-8 text-sm">
+                <a href="how-it-works.html" class="text-slate-300 hover:text-white transition">How It Works</a>
+                <a href="pricing.html" class="text-slate-300 hover:text-white transition">Pricing</a>
+                <a href="faq.html" class="text-[#00A878] font-semibold">FAQ</a>
+            </div>
+            <a href="pricing.html#waitlist" class="bg-[#00A878] hover:bg-[#00C68A] text-white px-5 py-2 rounded-full text-sm font-semibold transition">
+                Join Waitlist
+            </a>
         </div>
     </nav>
 
@@ -45,8 +52,8 @@
                 <summary class="font-semibold text-[#222B3A] cursor-pointer">Is my voice data recorded or sent to
                     servers?</summary>
                 <p class="text-slate-600 mt-3 leading-relaxed">
-                    <strong>No.</strong> All voice processing happens entirely on your device using on-device machine
-                    learning (CoreML for iOS, TensorFlow Lite for Android). Your trigger word never leaves your phone,
+                    <strong>No.</strong> All voice processing happens entirely on your device using on device machine
+                    learning (CoreML for iOS, TensorFlow Lite for Android). Your trigger word never leaves your phone
                     and no audio is recorded or stored.
                 </p>
             </details>
@@ -74,7 +81,7 @@
                 <summary class="font-semibold text-[#222B3A] cursor-pointer">What if someone forces me to unlock my
                     phone?</summary>
                 <p class="text-slate-600 mt-3 leading-relaxed">
-                    Even if you're forced to unlock your device with your PIN/fingerprint, NXT Sentinel will have
+                    Even if you are forced to unlock your device with your PIN or fingerprint, NXT Sentinel will have
                     already hidden your sensitive apps from the home screen and app drawer. The only way to unhide them
                     is with your master password in Recovery Mode.
                 </p>
@@ -92,7 +99,7 @@
             <details class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
                 <summary class="font-semibold text-[#222B3A] cursor-pointer">Will the app drain my battery?</summary>
                 <p class="text-slate-600 mt-3 leading-relaxed">
-                    NXT Sentinel uses low-power background listening modes designed to minimize battery impact. On
+                    NXT Sentinel uses low power background listening modes designed to minimize battery impact. On
                     modern phones, the additional drain is typically less than 2-3% per day. You can monitor exact usage
                     in your device's battery settings.
                 </p>
@@ -101,7 +108,7 @@
             <details class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
                 <summary class="font-semibold text-[#222B3A] cursor-pointer">What apps can I hide?</summary>
                 <p class="text-slate-600 mt-3 leading-relaxed">
-                    You can hide any third-party apps installed on your device, including banking apps, messaging apps
+                    You can hide any third party apps installed on your device, including banking apps, messaging apps
                     (WhatsApp, Telegram, Signal), social media, photo galleries, and email clients. System apps
                     (Settings, Phone) cannot be hidden for security reasons.
                 </p>
@@ -129,7 +136,7 @@
                     password?</summary>
                 <p class="text-slate-600 mt-3 leading-relaxed">
                     For security reasons, we cannot recover your master password. However, you can reset it through your
-                    account settings using your account email. If you're locked out, you may need to factory reset your
+                    account settings using your account email. If you are locked out, you may need to factory reset your
                     device as a last resort.
                 </p>
             </details>
@@ -148,8 +155,8 @@
                 <summary class="font-semibold text-[#222B3A] cursor-pointer">How accurate is the trigger word detection?
                 </summary>
                 <p class="text-slate-600 mt-3 leading-relaxed">
-                    Our on-device ML models achieve ~95% accuracy in controlled environments. False positives are rare
-                    but possible. We recommend using unique phrases (e.g., "Red Weather" instead of common words like
+                    Our on device ML models achieve approximately 95% accuracy in controlled environments. False positives are rare
+                    but possible. We recommend using unique phrases (for example, "Red Weather" instead of common words like
                     "Help") to minimize false triggers.
                 </p>
             </details>
@@ -165,7 +172,7 @@
 
     <footer class="bg-white border-t border-slate-200 py-8 mt-16">
         <div class="max-w-4xl mx-auto px-6 text-center text-sm text-slate-500">
-            <p>© 2025 Nxtconnectoff Corp. All rights reserved.</p>
+            <p>© 2026 Nxtconnectoff Corp. All rights reserved.</p>
             <p class="mt-2">
                 <a href="index.html" class="text-[#00A878] hover:underline">Home</a> ·
                 <a href="how-it-works.html" class="text-[#00A878] hover:underline">How It Works</a> ·
