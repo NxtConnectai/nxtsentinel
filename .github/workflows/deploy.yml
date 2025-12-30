@@ -2,10 +2,11 @@
 # NXT Sentinel Marketing Website - Firebase Hosting Deployment
 # ============================================================================
 # This workflow automatically deploys the marketing website to Firebase Hosting
-# when changes are pushed to the main branch.
+# when manually triggered OR when secrets are configured.
 #
 # Required GitHub Secrets:
 #   - FIREBASE_SERVICE_ACCOUNT: Service account JSON for Firebase deployment
+#   - FIREBASE_PROJECT_ID: nxtsentinel-8e0cd
 #
 # Setup Instructions:
 #   1. Go to Firebase Console > Project Settings > Service Accounts
@@ -14,17 +15,21 @@
 #   4. Go to GitHub repo > Settings > Secrets > Actions
 #   5. Create new secret named FIREBASE_SERVICE_ACCOUNT
 #   6. Paste the JSON content as the value
+#   7. Create FIREBASE_PROJECT_ID secret with value: nxtsentinel-8e0cd
 # ============================================================================
 
 name: Deploy to Firebase Hosting
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  # Manual trigger only until secrets are configured
+  workflow_dispatch:
+  # Uncomment below after adding secrets:
+  # push:
+  #   branches:
+  #     - main
+  # pull_request:
+  #   branches:
+  #     - main
 
 jobs:
   build_and_deploy:
@@ -36,25 +41,10 @@ jobs:
         uses: actions/checkout@v4
 
       # Step 2: Deploy to Firebase Hosting (Production)
-      # Only runs on push to main branch
       - name: Deploy to Firebase Hosting (Production)
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          repoToken: \${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: \${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           channelId: live
-          projectId: ${{ secrets.FIREBASE_PROJECT_ID }}
-
-      # Step 3: Deploy Preview Channel (for Pull Requests)
-      # Creates a unique preview URL for each PR
-      - name: Deploy Preview Channel
-        if: github.event_name == 'pull_request'
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-          projectId: ${{ secrets.FIREBASE_PROJECT_ID }}
-          # Preview channel expires after 7 days
-          expires: 7d
-
+          projectId: \${{ secrets.FIREBASE_PROJECT_ID }}
