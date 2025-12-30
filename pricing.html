@@ -514,10 +514,10 @@
         const errorMessage = document.getElementById('error-message');
         const successMessage = document.getElementById('success-message');
 
-        // API URL - change to production URL when deployed
+        // API URL - production Cloud Run URL (api.nxtsentinel.com SSL pending)
         const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
             ? 'http://localhost:8080'
-            : 'https://api.nxtsentinel.com';
+            : 'https://nxtsentinel-api-845093365871.us-central1.run.app';
 
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
